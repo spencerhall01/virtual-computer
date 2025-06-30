@@ -1,0 +1,6 @@
+parallel PMOS
+- outputs like NAND
+- equivalent to a single PMOS with inputs (A and B)
+-   since a single PMOS behaves like NOT, if you input (A and B), you get back the NAND behavior
+
+same with others
