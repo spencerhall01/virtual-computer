@@ -1,4 +1,4 @@
-# Spanning Trees on Quantum Annealers
+# Virtual Computer in VHDL
    
    This project is a digital computer built entirely from the ground up in VHDL. It starts at the transistor level (PMOS, NMOS) and builds upwards to basic logic gates (NOT, NAND, NOR, etc.), followed by combinational and sequential circuits (AND, OR, XOR, XNOR, IMPLY, flip-flops, multiplexers, etc.), memory components, an ALU, and eventually a simple CPU architecture.
    
@@ -26,9 +26,9 @@
 ## Repository Structure
    
     .
-    ├── src/         # Scripts as they were at the end of the research projects
-    ├── docs/        # Notes, images, TODOs, links, etc. - empty for now
-    ├── sim/         # Core scripts used during the studies - may be updated later
+    ├── src/         # VHDL files
+    ├── docs/        # References
+    ├── sim/         # Simulation outputs (empty)
     ├── LICENSE      # License file (MIT)
     └── README.md    # Project overview and documentation
    
@@ -47,20 +47,20 @@
    
    1. Analyze source files
       
-       ghdl -a src/combinational/gates/and.vhdl
-       ghdl -a src/testbenches/and_tb.vhdl
+      `ghdl -a src/combinational/gates/and.vhdl`
+      `ghdl -a src/testbenches/and_tb.vhdl`
       
    2. Elaborate the design
       
-       ghdl -e and_tb
+      `ghdl -e and_tb`
       
    3. Run the simulation
       
-       ghdl -r and_tb --wave=and_tb.ghw
+      `ghdl -r and_tb --wave=and_tb.ghw`
         
    4. View waveforms
       
-       gtkwave and_tb.ghw
+      `gtkwave and_tb.ghw`
       
    Repeat for other components by changing the filenames to match the module/testbench you're running.
    
